@@ -69,7 +69,7 @@ public class Controlador {
 
         try {
             if (campoNome.getText().isEmpty() == true){
-                throw new IllegalArgumentException("cu");
+                throw new IllegalArgumentException("campo vazio");
             }
             endereco.setRua(campoRua.getText());
             endereco.setNumero(campoNumero.getText());
