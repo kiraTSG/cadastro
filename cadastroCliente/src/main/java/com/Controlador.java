@@ -66,13 +66,16 @@ public class Controlador {
     
     @FXML
     private void Cadastrar()throws IllegalArgumentException, Exception {
-
+        
         try {
             if (campoNome.getText().isEmpty() == true){
                 throw new IllegalArgumentException("campo vazio");
             }
+            Endereco endereco = new Endereco();
             endereco.setRua(campoRua.getText());
             endereco.setNumero(campoNumero.getText());
+            endereco.setCidade(campoCidade.getText());
+            endereco.setEstado(campoEstado.getText());
             
             Cliente cliente = new Cliente(cod, campoNome.getText(), campoTelefone.getText(), endereco);
             listaClientes.add(cliente);
